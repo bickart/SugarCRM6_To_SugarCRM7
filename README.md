@@ -19,7 +19,7 @@ An example SugarCRM 6 module that is converted to SugarCRM 7
 </ul>
 
 
-<a name="depends"></a>
+<h3><a name="depends"></a>ReadOnly Dependency</h3>
 An example <a href="http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.7/03_Module_Framework/Sugar_Logic/01_Dependencies" target="sugarlogic">SugarLogic</a> function that will make a <b>field</b> to always be read-only.
 ```
 $dependencies['MODULE']['readonly'] = array(
