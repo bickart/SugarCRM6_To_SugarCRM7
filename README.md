@@ -45,14 +45,14 @@ Steps used in Migrating SugarCRM 6 module to SugarCRM 7
 ===
 1. In order to get the NEPO_DEMO subpanel to appear under Leads and Contacts we need to
   1. Migrate `NEPO_DEMO/metadata/subpanel/default.php` to `NEPO_DEMO/clients/base/views/subpanel-list/subpanel-list.php`
-  2. Migrate layoutedefs in the Contacts module from  `custom/Extension/modules/Contacts/Ext/Layoutdefs/nepo_demo_contacts_Contacts.php` to `custom/Extension/modules/Contacts/Ext/clients/base/layouts/subpanels/nepo_demo_contacts_Contacts.php`
-  3. Migrate layoutedefs in the Leads module from  `custom/Extension/modules/Leads/Ext/Layoutdefs/nepo_demo_leads_Leads.php` to `custom/Extension/modules/Leads/Ext/clients/base/layouts/subpanels/nepo_demo_leads_Leads.php`
+  2. Migrate layoutdefs in the Contacts module from  `custom/Extension/modules/Contacts/Ext/Layoutdefs/nepo_demo_contacts_Contacts.php` to `custom/Extension/modules/Contacts/Ext/clients/base/layouts/subpanels/nepo_demo_contacts_Contacts.php`
+  3. Migrate layoutdefs in the Leads module from  `custom/Extension/modules/Leads/Ext/Layoutdefs/nepo_demo_leads_Leads.php` to `custom/Extension/modules/Leads/Ext/clients/base/layouts/subpanels/nepo_demo_leads_Leads.php`
 2. Provide a Sugar 7 layout for NEPO_DEMO
   1. Migrate the NEPO_DEMO EditView/DetailView to be a record view in `NEPO_DEMO/client/base/views/record/record.php`
   2. Provide a menu so that the Demos tab looks correct by adding `NEPO_DEMO/client/base/menus/header/header.php`
   3. Migrate layoutdefs in the NEPO_DEMO module to either `NEPO_DEMO/clients/base/layouts/subpanels/subpanels.php` or `custom/Extension/modules/NEPO_DEMO/Ext/clients/base/layouts/subpanels/*.php` so that the Leads and Contacts subpanels appear on the Demos record view
 3. **Unknowns**
-  1. How to add a custom button to the record view
+  1. How do we add a custom action to the record view
   2. How to add javascript to the record view?
   3. What is the replacement for `YAHOO.SUGAR.MessageBox`?
   3. How do we add onchange logic to a field?
