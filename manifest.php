@@ -36,7 +36,7 @@ $manifest = array(
     'name' => 'Simple Example',
     'published_date' => 'Oct 18, 2013 5:00:00 PM EST',
     'type' => 'module',
-    'version' => '0.0.1',
+    'version' => '0.0.3',
     'remove_tables' => 'true',
     'is_uninstallable' => 'true',
 );
@@ -68,6 +68,10 @@ $installdefs = array(
             'from' => '<basepath>/custom/Extension/modules/NEPO_DEMO',
             'to' => 'custom/Extension/modules/NEPO_DEMO',
         ),
+        6 => array(
+            'from' => '<basepath>/custom/themes',
+            'to' => 'custom/themes',
+        ),
     ),
     'language' =>
     array(
@@ -86,13 +90,6 @@ $installdefs = array(
             'tab' => true,
         ),
     ),
-    'language' => array(
-        array(
-            'from' => '<basepath>/files/Language/Accounts/en_us.lang.php',
-            'to_module' => 'Accounts',
-            'language' => 'en_us'
-        ),
-    ),
 
     'relationships' => array(
         array(
@@ -108,5 +105,4 @@ $installdefs = array(
             'module_layoutdefs' => '<basepath>/custom/Extension/modules/Contacts/Ext/Layoutdefs/nepo_demo_contacts_Contacts.php'
         ),
     ),
-
 );
