@@ -51,6 +51,12 @@ Steps used in Migrating SugarCRM 6 module to SugarCRM 7
   1. Migrate the NEPO_DEMO EditView/DetailView to be a record view in `NEPO_DEMO/client/base/views/record/record.php`
   2. Provide a menu so that the Demos tab looks correct by adding `NEPO_DEMO/client/base/menus/header/header.php`
   3. Migrate layoutdefs in the NEPO_DEMO module to either `NEPO_DEMO/clients/base/layouts/subpanels/subpanels.php` or `custom/Extension/modules/NEPO_DEMO/Ext/clients/base/layouts/subpanels/*.php` so that the Leads and Contacts subpanels appear on the Demos record view
+3. **Unknowns**
+  1. How to add a custom button to the record view
+  2. How to add javascript to the record view?
+  3. What is the replacement for `YAHOO.SUGAR.MessageBox`?
+  3. How do we add onchange logic to a field?
+  4. How do we migrate the **Administrator** customizations in SugarCRM 7
 
 
 
