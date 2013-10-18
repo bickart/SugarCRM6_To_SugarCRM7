@@ -1,8 +1,10 @@
 Migrating SugarCRM 6.5.x customizations To SugarCRM 7.x
 ======================
+The goal of this project is to take a SugarCRM customization built for SugarCRM 6 and migrate it to SugarCRM 7.
 
 We have created an very simple installable module that has been tested with SugarCRM 6.5.15.
-The module <strong>NEPO_DEMO</strong> installs as the <strong>Demos</strong>.
+The module <strong>NEPO_DEMO</strong> installs as <strong>Demos</strong>.
+
 
 Demos has two relationships
 ===
@@ -12,7 +14,7 @@ Demos has two relationships
 Features of the Demos module
 ===
 * Detail View Customizations
-  * The field webservice_id uses the [SugarLogic](http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.7/03_Module_Framework/Sugar_Logic/01_Dependencies" target="sugarlogic) [ReadOnly]("#depends").
+  * The field webservice_id uses the [SugarLogic](http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.7/03_Module_Framework/Sugar_Logic/01_Dependencies" target="sugarlogic) ReadOnly (#depends) dependency.
   * The field webservice_id is set via a custom `SugarContoller`. The controller's intention is to update the field via a web service call prior to displaying the view to the user. In this demo we update the field via a call to the DB.
   * Javascript files are included in the metadata for the view
   * A custom button will appear on demo records if the webservice_id is greater than 5 and does the following:
@@ -21,7 +23,7 @@ Features of the Demos module
 
 * Edit View Customizations
   * Javascript files are included in the metadata for the view
-  * The field status has a display param javascript onchange logic. When the status changes:
+  * The field *status* has a javascript onchange function that does the following:
       * Display a custom `YAHOO.SUGAR.MessageBox`
       * When the YES button is pressed, make an Ajax call to the server
 

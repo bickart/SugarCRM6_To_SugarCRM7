@@ -36,7 +36,7 @@ $manifest = array(
     'name' => 'Simple Example',
     'published_date' => 'Oct 18, 2013 5:00:00 PM EST',
     'type' => 'module',
-    'version' => '0.0.3',
+    'version' => '0.0.4',
     'remove_tables' => 'true',
     'is_uninstallable' => 'true',
 );
@@ -95,8 +95,8 @@ $installdefs = array(
         array(
             'module' => 'Leads',
             'meta_data' => '<basepath>/custom/metadata/nepo_demo_leadsMetaData.php',
-            'module_vardefs' => '<basepath>/custom/Extension/modules/Leads/Ext/Vardefs/nepo_demo_contacts_Leads.php',
-            'module_layoutdefs' => '<basepath>/custom/Extension/modules/Leads/Ext/Layoutdefs/nepo_demo_contacts_Leads.php'
+            'module_vardefs' => '<basepath>/custom/Extension/modules/Leads/Ext/Vardefs/nepo_demo_leads_Leads.php',
+            'module_layoutdefs' => '<basepath>/custom/Extension/modules/Leads/Ext/Layoutdefs/nepo_demo_leads_Leads.php'
         ),
         array(
             'module' => 'Contacts',
