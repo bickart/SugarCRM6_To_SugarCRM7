@@ -57,6 +57,7 @@ Steps used in Migrating SugarCRM 6 module to SugarCRM 7
   3. What is the replacement for `YAHOO.SUGAR.MessageBox`?
   3. How do we add onchange logic to a field?
   4. How do we migrate the **Administrator** customizations in SugarCRM 7
+  5. The ReadOnly SugarLogic does not seem to work with the record view! Is this a SugarCRM bug?
 
 
 
