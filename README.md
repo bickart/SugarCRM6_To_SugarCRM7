@@ -1,5 +1,30 @@
-Migrating SugarCRM6 customizations To SugarCRM7
+Migrating SugarCRM 6.5.x customizations To SugarCRM 7.x
 ======================
+
+We have created an very simple installable module that has been tested with SugarCRM 6.5.15.
+The module <strong>NEPO_DEMO</strong> installs as the <strong>Demos</strong>.
+
+Demos has two relationships
+===
+1. Many to Many with Leads</li>
+2. Many to Many with Contacts</li>
+
+Features of the Demos module
+===
+* Detail View Customizations
+  * The field webservice_id uses the [SugarLogic](http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.7/03_Module_Framework/Sugar_Logic/01_Dependencies" target="sugarlogic) [ReadOnly]("#depends").
+  * The field webservice_id is set via a custom `SugarContoller`. The controller's intention is to update the field via a web service call prior to displaying the view to the user. In this demo we update the field via a call to the DB.
+  * Javascript files are included in the metadata for the view
+  * A custom button will appear on demo records if the webservice_id is greater than 5 and does the following:
+      * Displays a custom `YAHOO.SUGAR.MessageBox`
+      * When the YES button is pressed, make an Ajax call to the server
+
+* Edit View Customizations
+  * Javascript files are included in the metadata for the view
+  * The field status has a display param javascript onchange logic. When the status changes:
+      * Display a custom `YAHOO.SUGAR.MessageBox`
+      * When the YES button is pressed, make an Ajax call to the server
+
 
 An example SugarCRM 6 module that is converted to SugarCRM 7
 
@@ -22,7 +47,7 @@ An example SugarCRM 6 module that is converted to SugarCRM 7
 <h3><a name="depends"></a>ReadOnly Dependency</h3>
 An example <a href="http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.7/03_Module_Framework/Sugar_Logic/01_Dependencies" target="sugarlogic">SugarLogic</a> function that will make a <b>field</b> to always be read-only.
 ```
-$dependencies['MODULE']['readonly'] = array(
+$dependencies['NEPO_DEMO']['readonly'] = array(
         'hooks' => array("edit"),
         'trigger' => 'true',
         'triggerFields' => true,
@@ -31,7 +56,7 @@ $dependencies['MODULE']['readonly'] = array(
                 array(
                         'name' => 'ReadOnly',
                         'params' => array(
-                                'target' => 'FIELD',
+                                'target' => 'webservice_id',
                                 'value' => 'true',
                         ),
                 ),
