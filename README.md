@@ -60,7 +60,7 @@ Steps used in Migrating SugarCRM 6 module to SugarCRM 7
   5. The ReadOnly SugarLogic does not seem to work with the record view! Is this a SugarCRM bug?
   6. How do replace the web service call that takes place in the SugarController?
   7. How do we build an Intelligence Pane dashlet and have the dashlet respond to the change of the record?  Further, how do we limit the dashlet to only be able to appear within certain modules?
-  8. Prevent saving of a record due to an server side record call? Sort of like a check for duplicates on steroids!
+  8. How do we prevent the saving of a record due to an server side record call? Sort of like a check for duplicates on steroids!
 
 
 
